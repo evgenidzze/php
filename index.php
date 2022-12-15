@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,17 +13,22 @@
 </head>
 <body>
 
-<form action="" method="">
+<form action="vendor/sign_in.php" method="POST">
     <label for="">Login</label>
-    <input type="text" placeholder="Enter login or email">
+    <input type="text" name="login" placeholder="Enter login or email">
     <br>
     <label for="">Password</label>
-    <input type="password" placeholder="Enter password">
+    <input type="password" name="password" placeholder="Enter password">
     <br>
-    <button>Enter</button>
+    <button type="submit">Enter</button>
     <p>
         If you don't have an account you can <a href="/register.php">Create one here</a>
     </p>
+    <?php
+    if ($_SESSION['message']) {
+        echo "<p class='msg'>{$_SESSION['message']}</p>";
+    }
+    ?>
 </form>
 
 </body>

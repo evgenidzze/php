@@ -1,6 +1,5 @@
 <?php
     session_start();
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,7 +23,7 @@
     <label for="">Repeat your password</label>
     <input type="password" name="password_confirm" placeholder="Repeat password">
     <br>
-    <button>Register</button>
+    <button type="submit">Register</button>
     <p>
         If you already have an account you can <a href="/index.php">Sign in</a>
     </p>
