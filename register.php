@@ -1,3 +1,7 @@
+<?php
+    session_start();
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,19 +14,26 @@
 </head>
 <body>
 
-<form action="" method="">
-    <label for="">Login/Email</label>
-    <input type="text" placeholder="Enter login or email">
+<form action="vendor/signup.php" method="POST">
+    <label for="">Login</label>
+    <input type="text" name="login" placeholder="Enter login">
     <br>
     <label for="">Password</label>
-    <input type="password" placeholder="Enter password">
+    <input type="password" name="password" placeholder="Enter password">
     <br>
     <label for="">Repeat your password</label>
-    <input type="password" placeholder="Repeat password">
+    <input type="password" name="password_confirm" placeholder="Repeat password">
     <br>
     <button>Register</button>
     <p>
         If you already have an account you can <a href="/index.php">Sign in</a>
+    </p>
+
+        <?php
+        if ($_SESSION['message']){
+            echo "<p class='msg'>{$_SESSION['message']}</p>";
+        }
+        ?>
     </p>
 </form>
 

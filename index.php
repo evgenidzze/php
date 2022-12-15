@@ -11,7 +11,7 @@
 <body>
 
 <form action="" method="">
-    <label for="">Login/Email</label>
+    <label for="">Login</label>
     <input type="text" placeholder="Enter login or email">
     <br>
     <label for="">Password</label>

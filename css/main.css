@@ -33,3 +33,10 @@ p {
   color: rgba(29, 29, 26, 0.73);
     
 }
+
+.msg {
+    border: 2px solid #ce5050;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
